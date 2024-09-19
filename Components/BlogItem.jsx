@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import { blog_data } from "@/Assets/assets";
+import { assets, blog_data } from "@/Assets/assets";
 
 const BlogItem = () => {
   return (
@@ -22,6 +22,10 @@ const BlogItem = () => {
         <p className="mb-3 text-sm tracking-tight text-gray-700">
           {blog_data[0].description}
         </p>
+        <div className="inline-flex items-center py-2 font-semibold text-center">
+          Read more{" "}
+          <Image src={assets.arrow} className="ml-2" alt="" width={12} />{" "}
+        </div>
       </div>
     </div>
   );
